@@ -1,0 +1,123 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: rgba(255,255,255,0.92);
+  background: #0b0b0c;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+}
+
+.panel {
+  width: min(480px, 44vw);
+  padding: 56px 44px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.88), rgba(0,0,0,0.72));
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tag {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+
+.nav {
+  margin-top: 10px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 4px;
+}
+.nav__link:hover { border-bottom-color: rgba(255,255,255,0.5); }
+
+.cta {
+  margin-top: auto;
+  display: grid;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn--primary { background: #ffffff; color: #111; }
+.btn--ghost {
+  border: 1px solid rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.92);
+}
+
+.hero {
+  flex: 1;
+  background-image: url("../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Sections below the hero */
+.section {
+  padding: 70px 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: #0b0b0c;
+}
+
+.section__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 28px;
+}
+
+.list { margin: 0; padding-left: 18px; color: rgba(255,255,255,0.78); }
+.list a { color: rgba(255,255,255,0.92); }
+
+.back {
+  display: inline-block;
+  margin-top: 18px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+}
+.back:hover { text-decoration: underline; }
+
+/* Mobile */
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  .panel { width: 100%; padding: 28px 18px; }
+  h1 { font-size: 40px; }
+  .hero { min-height: 44vh; }
+}
